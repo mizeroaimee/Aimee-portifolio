@@ -1,749 +1,561 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Aimee's Portfolio</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-   
-
+    
     <style>
+        /* --- Root Variables for Colors --- */
+        :root {
+            --color-primary: #5d3fec;
+            --color-dark: #1a1a1a;
+            --color-light-bg: #e7d0d0;
+            --color-blog-bg: #f8f0f8; /* Light pink/mauve for the light blog section */
+            --color-project-bg: #1c1c3c; /* Dark blue/purple for the project section */
+        }
 
         /* Basic Reset and Global Styles */
-
         body {
-
             font-family: Arial, sans-serif;
-
             margin: 0;
-
             padding: 0;
-
-            background-color: #e7d0d0; /* Light background */
-
+            background-color: var(--color-light-bg); 
             color: #333;
-
         }
-
-
 
         .container {
-
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 20px;
-
         }
 
-
-
-        /* --- 1. Navigation Bar Styling --- */
-
+        /* --- 1. Navigation Bar Styling (UNCHANGED) --- */
         .navbar {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             padding: 15px 40px;
-
-            background-color: #e9c6c6; /* White background for the nav */
-
+            background-color: #e9c6c6; 
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
         }
-
-
 
         .logo {
-
             font-size: 30px;
-
             font-weight: Extrabold;
-
             color: #000;
-
         }
-
-
 
         .nav-links {
-
             list-style: none;
-
             display: flex;
-
             margin: 0;
-
             padding: 0;
-
         }
-
-
 
         .nav-links li {
-
             margin-left: 20px;
-
         }
-
-
 
         .nav-links a {
-
             text-decoration: none;
-
             color: #555;
-
             font-size: 14px;
-
             transition: color 0.3s;
-
         }
-
-
 
         .nav-links a:hover, .nav-links a.active {
-
             color: #000;
-
             font-weight: bold;
-
         }
 
-
-
-
-
-        /* --- 2. Hero Section Styling --- */
-
+        /* --- 2. Hero Section Styling (UNCHANGED) --- */
         .hero-section {
-
             display: flex;
-
             align-items: center;
-
             gap: 50px;
-
             padding: 80px 0;
-
         }
-
-
 
         .hero-content {
-
             flex: 1;
-
         }
-
-
 
         .hero-content p:first-child {
-
             font-size: 14px;
-
             color: #777;
-
             margin-bottom: 5px;
-
         }
-
-
 
         .hero-content h1 {
-
             font-size: 48px;
-
             margin: 0 0 10px 0;
-
         }
-
-
 
         .tagline {
-
             font-size: 18px;
-
             line-height: 1.5;
-
             margin-bottom: 20px;
-
         }
-
-
 
         .hero-image-container {
-
             flex: 1;
-
             display: flex;
-
             justify-content: flex-end;
-
-            /* This creates the dark frame/border effect */
-
-            background-color: #1a1a1a;
-
+            background-color: var(--color-dark);
             padding: 10px;
-
-            width: 280px; /* Adjust as needed */
-
-            height: 500px; /* Adjust as needed */
-
+            width: 280px; 
+            height: 500px; 
             overflow: hidden;
-
         }
-
-
 
         .hero-image {
-
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
-
             display: block;
-
         }
-
-
 
         .social-icons a {
-
             font-size: 28px;
-
             margin-right: 15px;
-
             color: #333;
-
             transition: color 0.3s;
-
         }
-
-
 
         .social-icons a:hover {
-
-            color: #5d3fec; /* Example hover color */
-
+            color: var(--color-primary); 
         }
 
-
-
-
-
-        /* --- 3. About Me Section Styling --- */
-
+        /* --- 3. About Me Section Styling (UNCHANGED) --- */
         .about-section {
-
             padding: 50px 0;
-
             margin-top: 50px;
-
         }
-
-
 
         .about-title h2 {
-
             font-size: 36px;
-
             text-align: center;
-
             margin-bottom: 40px;
-
             position: relative;
-
         }
-
-
-
-        /* Optional: Add the line under "About me" */
 
         .about-title h2::after {
-
             content: '';
-
             display: block;
-
             width: 50px;
-
             height: 3px;
-
-            background-color: #f7f7f9; /* Primary color */
-
+            background-color: #f7f7f9; 
             margin: 10px auto 0;
-
         }
-
-
 
         .about-content {
-
             display: flex;
-
             align-items: center;
-
             gap: 40px;
-
         }
-
-
 
         .about-image-container {
-
-            /* Similar dark frame as the hero image */
-
-            background-color: #1a1a1a;
-
+            background-color: var(--color-dark);
             padding: 8px;
-
-            width: 250px; /* Adjust as needed */
-
-            height: 300px; /* Adjust as needed */
-
+            width: 250px; 
+            height: 300px; 
             overflow: hidden;
-
         }
-
-
 
         .about-image {
-
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
-
             display: block;
-
         }
-
-
 
         .about-text-buttons {
-
             flex: 2;
-
             padding-right: 20px;
-
         }
-
-
 
         .about-text-buttons p {
-
             margin-bottom: 15px;
-
             line-height: 1.6;
-
         }
 
-
-
-        /* --- 4. Button Styling --- */
-
+        /* --- 4. Button Styling (UNCHANGED) --- */
         .about-buttons {
-
             margin-top: 30px;
-
         }
-
-
 
         .btn {
-
             padding: 12px 25px;
-
             border: none;
-
             cursor: pointer;
-
             font-weight: bold;
-
             border-radius: 5px;
-
             transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-
         }
-
-
 
         .btn-primary {
-
-            background-color: #5d3fec; /* Purple color from the image */
-
+            background-color: var(--color-primary); 
             color: white;
-
             margin-right: 15px;
-
-            border: 2px solid #5d3fec;
-
+            border: 2px solid var(--color-primary);
         }
-
-
 
         .btn-primary:hover {
-
             background-color: #4c33c4;
-
         }
-
-
 
         .btn-secondary {
-
             background-color: transparent;
-
             color: #333;
-
             border: 2px solid #333;
-
         }
-
-
 
         .btn-secondary:hover {
-
             background-color: #333;
-
             color: white;
-
         }
 
-
-
-        /* --- CONTACT US SECTION STYLES (FROM contact.html) --- */
-
-       
-
-        /* NOTE: Renamed .contact-us-section to #contact-section to match the link */
-
-        #contact-section {
-
-            /* background-color: #e2d4cd; */ /* Removed conflicting background color */
-
-            background-color: #f7f7f7; /* Keep the body background for a cleaner look */
-
-            padding: 40px 20px;
-
+        /* ------------------------------------------- */
+        /* --- 5. NEW PROJECT SECTION STYLING (DARK THEME) --- */
+        /* ------------------------------------------- */
+        .project-section {
+            padding: 80px 0;
+            background-color: var(--color-project-bg); /* Dark background from image */
+            color: white;
             text-align: center;
+            margin-top: 50px;
+        }
 
+        .project-header h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .project-header p {
+            font-size: 1.1em;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Allows wrap on smaller screens */
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background-color: #2a2a4b; /* Slightly lighter dark color for the cards */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            max-width: 350px;
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for image area */
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-card h3 {
+            font-size: 1.2em;
+            margin: 15px 20px 5px;
+            color: white;
+        }
+
+        .project-card p {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            padding: 0 20px 15px;
+            margin: 0;
+        }
+        
+        /* New Link/Button Style for Read Article (matching screenshot) */
+        .project-card .read-article {
+            display: inline-block;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px 20px;
+            transition: color 0.3s;
+        }
+        
+        .project-card .read-article:hover {
+            color: #fff;
         }
 
 
+        /* ------------------------------------------- */
+        /* --- 6. BLOG SECTION STYLING (LIGHT THEME) --- */
+        /* ------------------------------------------- */
+        .blog-selection {
+            padding: 80px 20px;
+            background-color: var(--color-blog-bg); /* Light background from image */
+            text-align: center; 
+            margin-top: 50px;
+        }
+
+        .blog-selection h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .blog-selection p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 50px; 
+        }
+
+        .blog-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px; 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            flex: 1 1 300px; 
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: left; 
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.05em;
+            color: #333;
+            font-weight: normal;
+            min-height: 40px; 
+            margin-bottom: 25px;
+            align-self: flex-start;
+            padding: 0 5px;
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #483d8b; /* Dark purple color matching the blog image */
+            color: white;
+            text-decoration: none; 
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: auto; 
+            align-self: center; 
+        }
+
+        .btn-read-more:hover {
+            background-color: #3a326f;
+        }
+        
+        /* --- 7. Testimonial Section (PLACEHOLDER STYLES) --- */
+        .testimonial-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .testimonial-section h2 {
+             font-size: 36px;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.1em;
+            color: #333;
+            border-left: 3px solid var(--color-primary);
+            padding-left: 15px;
+            margin: 15px 0 0;
+            text-align: left;
+        }
+
+        .slider-dots {
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: var(--color-primary);
+        }
+        
+        /* --- 8. CONTACT US SECTION STYLES (UNCHANGED) --- */
+        #contact-section {
+            background-color: #f7f7f7; 
+            padding: 40px 20px;
+            text-align: center;
+        }
 
         #contact-section h2 {
-
-            font-size: 28px; /* Adjusted to match portfolio section size */
-
+            font-size: 28px; 
             margin-bottom: 5px;
-
             color: #333;
-
         }
-
-       
-
-        /* Optional: Add the line under "Contact Us" */
-
+        
         #contact-section h2::after {
-
             content: '';
-
             display: block;
-
             width: 50px;
-
             height: 3px;
-
-            background-color: #5d3fec; /* Primary color */
-
+            background-color: var(--color-primary); 
             margin: 10px auto 0;
-
         }
 
-
-
-
-
-        #contact-section > p { /* Target the introductory paragraph */
-
+        #contact-section > p { 
             max-width: 600px;
-
             margin: 0 auto 30px;
-
             color: #555;
-
         }
-
-
-
-        /* --- Layout: Information (Left) and Form (Right) --- */
 
         .contact-content {
-
             display: flex;
-
             justify-content: center;
-
-            gap: 50px; /* Space between info and form */
-
+            gap: 50px; 
             max-width: 900px;
-
             margin: 30px auto 0;
-
-            background-color: #ffffff; /* White background for the content box */
-
+            background-color: #ffffff; 
             padding: 40px;
-
             border-radius: 8px;
-
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-
         }
-
-       
-
-        /* --- Contact Information Styling --- */
-
+        
         .contact-info {
-
             display: flex;
-
             flex-direction: column;
-
             gap: 25px;
-
             text-align: left;
-
             min-width: 280px;
-
         }
-
-       
-
+        
         .info-item {
-
             display: flex;
-
             align-items: center;
-
             gap: 15px;
-
             padding: 10px 0;
-
         }
-
-       
-
+        
         .info-item i {
-
             font-size: 18px;
-
-            color: #5d3fec; /* Primary color for icons */
-
+            color: var(--color-primary); 
         }
-
-
 
         .info-details {
-
             display: flex;
-
             flex-direction: column;
-
         }
-
-
 
         .info-details strong {
-
             font-size: 14px;
-
             color: #444;
-
         }
-
-
 
         .info-details p {
-
             margin: 0;
-
             font-size: 16px;
-
             font-weight: bold;
-
             color: #333;
-
         }
-
-
-
-        /* --- Contact Form Styling (Right Gray Block) --- */
 
         .contact-form {
-
             display: flex;
-
             flex-direction: column;
-
             gap: 15px;
-
-            flex-grow: 1; /* Allows form to take up available space */
-
+            flex-grow: 1; 
             max-width: 450px;
-
         }
-
-       
-
+        
         .contact-form input,
-
         .contact-form textarea {
-
             padding: 15px;
-
             border: none;
-
-            background-color: #d3d1d0; /* Gray background for fields */
-
+            background-color: #d3d1d0; 
             border-radius: 4px;
-
             font-size: 16px;
-
             width: 100%;
-
             box-sizing: border-box;
-
         }
-
-       
-
+        
         .contact-form textarea {
-
             resize: vertical;
-
         }
-
-
-
-        /* Style for the 'Send us a message' button text */
 
         .form-submit-text {
-
-            color: #5d3fec; /* Use primary color for link text */
-
-            text-align: right; /* Aligned to the right */
-
+            color: var(--color-primary); 
+            text-align: right; 
             font-size: 14px;
-
             font-weight: bold;
-
             padding: 10px 0;
-
             cursor: pointer;
-
-            text-decoration: none; /* Remove underline if it was an <a> tag */
-
+            text-decoration: none; 
             display: block;
-
         }
 
-
-
-        /* --- Bottom Dark Bar --- */
-
+        /* --- Bottom Dark Bar (REPLACED by Footer) --- */
         .bottom-bar {
-
-            background-color: #4b2a8d; /* Dark purple color */
-
-            height: 90px;
-
-            width: 100%;
-
-            margin-top: 50px;
-
+            display: none; /* Hide the old placeholder bar */
         }
 
-
-
-        /* --- Media Query for Mobile Responsiveness --- */
-
-        @media (max-width: 768px) {
-
-            .contact-content {
-
-                flex-direction: column;
-
-                gap: 40px;
-
-                padding: 40px 20px; /* Adjust padding for mobile */
-
-            }
-
-
-
-            .contact-info {
-
-                min-width: 100%;
-
-                /* Align items to the left in mobile to match the original image structure better */
-
-                align-items: flex-start;
-
-                text-align: left;
-
-            }
-
-
-
-            .info-item {
-
-                /* Keep the row layout for info items */
-
-                flex-direction: row;
-
-                gap: 15px;
-
-            }
-
-
-
-            .info-details {
-
-                text-align: left;
-
-            }
-
-        }
-
-        /* END OF CONTACT CSS */
-        /* --- NEW FOOTER STYLING --- */
+        /* --- 9. FOOTER STYLING (UNCHANGED) --- */
         .site-footer {
-            background-color: #333; /* Dark background */
-            color: #f7f7f7; /* Light text */
+            background-color: #333; 
+            color: #f7f7f7; 
             padding: 30px 0;
             font-size: 14px;
             text-align: center;
         }
 
         .footer-content {
-            /* Uses the existing .container max-width for alignment */
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -760,519 +572,204 @@
         }
 
         .footer-links a:hover {
-            color: #5d3fec; /* Uses your primary purple color for hover */
+            color: var(--color-primary); 
         }
 
-        /* Footer Mobile Responsiveness */
-        @media (max-width: 600px) {
+        /* --- 10. Media Query for Responsiveness --- */
+        @media (max-width: 900px) {
+             /* Project Grid Mobile Stack */
+            .project-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                max-width: 90%;
+            }
+            
+            /* Blog Grid Mobile Stack */
+            .blog-grid {
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .blog-card {
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+             .hero-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .hero-image-container {
+                width: 100%;
+                height: 400px;
+            }
+            .about-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .about-image-container {
+                width: 100%;
+                height: 350px;
+            }
+            .contact-content {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+            .contact-info {
+                min-width: 100%;
+                align-items: flex-start;
+                text-align: left;
+            }
             .footer-content {
                 flex-direction: column;
                 gap: 15px;
             }
-            .footer-links a {
-                margin: 0 10px;
-            }
         }
-        /* END OF FOOTER STYLING */
-
     </style>
-
-
-
 </head>
 
 <body>
 
-
-
     <nav class="navbar">
-
         <div class="logo">Miro</div>
-
         <ul class="nav-links">
-
             <li><a href="#home-section" class="active">Home</a></li>
-
             <li><a href="#about-section" class="active">About</a></li>
-
             <li><a href="#project-section" class="active">Project</a></li>
-
             <li><a href="#skills-section" class="active">Skills</a></li>
-
             <li><a href="#experience-section" class="active">Experience</a></li>
-
             <li><a href="#blog-selection" class="active">Blog</a></li>
-
             <li><a href="#testimonial-section" class="active">Testimonial</a></li>
-
             <li><a href="#contact-section" class="active">Contact</a></li>
-
         </ul>
-
     </nav>
-
-
 
     <main class="container">
 
-
-
         <section class="hero-section" id="home-section">
-
             <div class="hero-content">
-
                 <p>HI, WELCOME TO MY WORLD</p>
-
                 <h1>I'M Aimee,</h1>
-
                 <p class="tagline">an inspiring IT, Entreprenuer passionate about technology, <br> and community impact through advocacy.</p>
 
-
-
                 <div class="social-icons">
-
                     <a href="mailto:mizeroua@gmail.com"><i class="fas fa-envelope"></i></a>
-
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
                     <a href="#"><i class="fab fa-tiktok"></i></a>
-
                 </div>
-
             </div>
-
             <div class="hero-image-container">
-
-                <img src="./image.image.png" alt="Aimee Professional Photo" class="hero-image">
-
+                <img src="path/to/Aimee_Professional_Photo.png" alt="Aimee Professional Photo" class="hero-image">
             </div>
-
         </section>
-
-
 
         <section class="about-section" id="about-section">
-
             <div class="about-title">
-
                 <h2>About me</h2>
-
             </div>
-
             <div class="about-content">
-
                 <div class="about-image-container">
-
-                    <img src="images/image.png" alt="Aimee About Photo" class="about-image">
-
+                    <img src="path/to/Aimee_About_Photo.png" alt="Aimee About Photo" class="about-image">
                 </div>
-
                 <div class="about-text-buttons">
-
                     <p>I am an entrepreneur and also a person who is passionate about Technology, Advocating for young girls and women for empowering them, and changing the mindset, showing them they are able to think and put in action their different ideas, by contributing to the sustainable development of our country.</p>
-
                     <p>By technology, as all over us we know the world is growing by not left behind the technology too so that, keep update ourself in tech can accompany as well.</p>
 
-
-
                     <div class="about-buttons">
-
                         <button class="btn btn-primary">My Project</button>
-
                         <button class="btn btn-secondary">Download CV</button>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
-       
 
         <section class="project-section" id="project-section">
-
             <div class="project-header">
-
                 <h2>Project</h2>
-
-                <p>Here's a selectio of my recent work, showcasing my skills in creating user centric and visually appealing interfaces.</p>
-
-                <div class="project-grid">
-
-               
+                <p>Here's a selection of my recent work, showcasing my skills in creating user centric and visually appealing interfaces.</p>
+            </div>
+            <div class="project-grid">
 
                 <div class="project-card">
-
-                    <img src="./image/ee1.png" alt="E-commerce Admin Dashboard Screenshot">
-
-                    <h3>E-commerce Admin Dashboard</h3>
-
-                    <p>focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.</p>
-
+                    <img src="images/project1.png" alt="Mastering CSS Grid Project Image">
+                    <h3>Mastering CSS Grid in 2025</h3>
+                    <p>Why flexbox isn't enough anymore and how glassmorphism relies on modern grid layouts.</p>
+                    <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
-
-
                 <div class="project-card">
-
-                    <img src="./image/a1.png" alt="Customer Insight Dashboard Screenshot">
-
-                    <h3>E-commerce Admin Dashboard</h3>
-
-                    <p>Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
-
+                    <img src="images/project2.png" alt="The Rise of AI in Rwanda Project Image">
+                    <h3>The Rise of AI in Rwanda</h3>
+                    <p>How local developers are leveraging machine learning to solve agricultural challenges.</p>
+                    <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
-
-
                 <div class="project-card">
-
-                    <img src="./image/b1.png" alt="Modern Admin Panel Screenshot">
-
-                    <h3>E-commerce Admin Dashboard</h3>
-
-                    <p>Development a modern admin panel with a focus usability seamless a navigation for end user and so on.</p>
-
+                    <img src="images/project3.png" alt="Dark Mode Design Principles Project Image">
+                    <h3>Dark Mode Design Principles</h3>
+                    <p>Creating depth with shadows and lighting without using pure black backgrounds.</p>
+                    <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
             </div>
-
         </section>
-
-       
 
         <section class="Skills-section" id="skills-section">
-
             <h2>Skills</h2>
-
             <p>An outline of my key technical abilities that support</p>
-
             <div class="skill-categories">
-
-               
-
-                <div class="skill-category">
-
-                    <h3>FRONTEND</h3>
-
-                    <div class="skill-card">
-
-                        <ul>
-
-                            <li>HTML</li>
-
-                            <li>CSS</li>
-
-                            <li>JavaScript</li>
-
-                        </ul>
-
-                    </div>
-
                 </div>
-
-
-
-                <div class="skill-category">
-
-                    <h3>BACKEND</h3>
-
-                    <div class="skill-card">
-
-                        <ul>
-
-                            <li>**PHP (BASICS)**</li>
-
-                            <li>MySQL</li>
-
-                            <li>SQL Queries</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="skill-category">
-
-                    <h3>DESIGN</h3>
-
-                    <div class="skill-card">
-
-                        <ul>
-
-                            <li>Canva</li>
-
-                            <li>VS Code</li>
-
-                            <li>GitHub</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-
-
         </section>
-
-
 
         <section class="experience-selection" id="experience-section">
-
             <h2>Experience</h2>
-
             <p>The experience through education and career</p>
-
-
-
             <div class="experience-timeline">
-
-               
-
-                <div class="timeline-column education-column">
-
-                    <h3>Education</h3>
-
-                    <div class="timeline-item">
-
-                        <p class="date">2022 - 2025</p>
-
-                        <ul>
-
-                            <li>Bachelor's of Business information technology</li>
-
-                        </ul>
-
-                        <p class="location">University of Rwanda</p>
-
-                    </div>
-
-                    </div>
-
-
-
-                <div class="timeline-column career-column">
-
-                    <h3>Career</h3>
-
-                    <div class="timeline-item">
-
-                        <p class="date">Oct 2025 - Present</p>
-
-                        <ul>
-
-                            <li>Developer Trainee</li>
-
-                        </ul>
-
-                        <p class="location">KLab</p>
-
-                    </div>
-
-                    </div>
-
-
-
-            </div>
-
+                </div>
         </section>
 
-
-
-        <section class="Blog-selection" id="blog-selection">
-
+        <section class="blog-selection" id="blog-selection">
             <h2>Blog</h2>
-
             <p>Discover my recent blog articles covering design principles, development tips, and the newest innovations in the industry.</p>
 
-
-
             <div class="blog-grid">
-
-               
-
+                
                 <div class="blog-card">
-
-
-
-                    <img src="./image/blog1.png" alt="Designing User Interface Image">
-
+                    <img src="images/blog1.png" alt="Designing User Interface Image">
                     <h3>Designing Engaging user interface for the project</h3>
-
                     <a href="#" class="btn-read-more">Read More</a>
-
                 </div>
 
-
-
-
-
                 <div class="blog-card">
-
-                    <img src="./image/blog2.png" alt="Dashboard Tips Image">
-
+                    <img src="images/blog2.png" alt="Dashboard Tips Image">
                     <h3>Tips for Effective Dashboard layout and ......</h3>
-
                     <a href="#" class="btn-read-more">Read More</a>
-
                 </div>
 
-
-
-
-
                 <div class="blog-card">
-                 <h1>Mizero Aimee</h1>
-                 <p> Mizero Aimee</p>
                     <img src="./image/blog3.png" alt="Responsive Design Image">
-
                     <h3>How to visualize data for better product and Responsive design: Adapting to all devices....</h3>
-
                     <a href="#" class="btn-read-more">Read More</a>
-
                 </div>
 
             </div>
-
         </section>
-
-
 
         <section class="testimonial-section" id="testimonial-section">
-
             <h2>Testimonial</h2>
-
-
-
-            <div class="testimonial-container">
-
-                <div class="testimonial-card">
-
-                    <p>Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
-
-                    <blockquote>
-
-                        "From the initial consultation to the final delivery, Every step was handled professionally. the end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended."
-
-                    </blockquote>
-
-                    </div>
-
-                <div class="slider-dots">
-
-                    <span class="dot active"></span>
-
-                    <span class="dot"></span>
-
-                    <span class="dot"></span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
+            </section>
 
         <section class="contact-us-section" id="contact-section">
-
             <h2>Contact Us</h2>
-
             <p>We're here to help. Reach out for inquiries, partnerships, or support, and our team will respond as soon as possible.</p>
+            </section>
 
+    </main>
 
-
-            <div class="contact-content">
-
-                <div class="contact-info">
-
-                   
-
-                    <div class="info-item">
-
-                        <i class="fas fa-home"></i>
-
-                        <div class="info-details">
-
-                            <strong>Address</strong>
-
-                            <p>Kigali, Rwanda</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="info-item">
-
-                        <i class="fas fa-phone"></i>
-
-                        <div class="info-details">
-
-                            <strong>Phone</strong>
-
-                            <p>+250789831553</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="info-item">
-
-                        <i class="fas fa-envelope"></i>
-
-                        <div class="info-details">
-
-                            <strong>Email</strong>
-
-                            <p>mizeroua@gmail.com</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-               
-
-                <form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
-
-                    <input type="text" id="full-name" name="full-name" placeholder="Full Name*" required>
-
-                    <input type="email" id="email-address" name="email-address" placeholder="Email Address*" required>
-
-                    <textarea id="message" name="message" placeholder="Message*" rows="6" required></textarea>
-
-                   
-
-                    <button type="submit" class="form-submit-text" style="background: none; border: none;">Send us a message</button>
-
-                </form>
-
-            </div>
-
-        </section>
-
-        </main>
-
-   
-
-    <div class="bottom-bar"></div>
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2025 Aimee Portfolio. All rights reserved.</p>
@@ -1284,6 +781,6 @@
         </div>
     </footer>
 
-    </body>
+</body>
 
 </html>
