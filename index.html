@@ -250,7 +250,7 @@
         }
 
         .project-card {
-            background-color: #2a2a4b; /* Slightly lighter dark color for the cards */
+            background-color: #e7d0d0; /* Slightly lighter dark color for the cards */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -296,6 +296,180 @@
         .project-card .read-article:hover {
             color: #fff;
         }
+
+        /* --- SKILLS SECTION STYLING --- */
+
+.skills-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f3f3; /* Light background matching your images */
+}
+
+.skills-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.skills-section p {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Flex container for the three columns */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Individual skill column card */
+.skill-category {
+    flex: 1; /* Allows columns to grow and take equal space */
+    min-width: 250px; /* Ensures minimum size before wrapping */
+    background-color: #e6e0e0; /* Background color matching your cards */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-category h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Styling for the list of skills */
+.skill-list p {
+    font-size: 1em;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #333; /* Darker text for readability */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px;
+    }
+    .skill-category {
+        min-width: 100%;
+    }
+}
+
+/* --- EXPERIENCE SECTION STYLING --- */
+
+.experience-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f3f3; /* Light, neutral background */
+}
+
+.experience-section h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.experience-section p {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Timeline Container (The core structure) */
+.experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* The subtle vertical connecting line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center the line */
+    width: 2px;
+    height: 100%;
+    background-color: #ccc; /* Light gray line */
+    transform: translateX(-50%);
+}
+
+/* Individual entry item */
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    padding: 10px 0;
+    text-align: left;
+}
+
+/* Timeline content container */
+.timeline-content {
+    background-color: #fff; /* White card background */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+}
+
+.timeline-content h3 {
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #7a7a7a;
+    margin-bottom: 10px;
+    display: block; /* Ensures date is on its own line */
+}
+
+/* Timeline bullet point (The visual marker on the line) */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #4a148c; /* Primary color (e.g., matching your buttons) */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Make lists cleaner inside the content */
+.timeline-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.timeline-content li {
+    margin-bottom: 5px;
+}
+
+
+/* --- Responsive Fix (Timeline on the left for mobile) --- */
+@media (max-width: 600px) {
+    .experience-timeline::before,
+    .timeline-item::after {
+        left: 10px; /* Move line and dots to the far left */
+        transform: none;
+    }
+    
+    .timeline-item {
+        padding-left: 40px; /* Add space for the line/dots */
+    }
+    
+    .timeline-date {
+        font-size: 0.9em;
+    }
+}
 
 
         /* ------------------------------------------- */
@@ -696,22 +870,22 @@
 
                 <div class="project-card">
                     <img src="images/project1.png" alt="Mastering CSS Grid Project Image">
-                    <h3>Mastering CSS Grid in 2025</h3>
-                    <p>Why flexbox isn't enough anymore and how glassmorphism relies on modern grid layouts.</p>
+                    <h3>E- commerce Admin Dashboard  </h3>
+            <p>I focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.</p>
                     <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
                 <div class="project-card">
                     <img src="images/project2.png" alt="The Rise of AI in Rwanda Project Image">
-                    <h3>The Rise of AI in Rwanda</h3>
-                    <p>How local developers are leveraging machine learning to solve agricultural challenges.</p>
+                    <h3>E- commerce Admin Dashboard</h3>
+                    <p>Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
                     <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
                 <div class="project-card">
                     <img src="images/project3.png" alt="Dark Mode Design Principles Project Image">
-                    <h3>Dark Mode Design Principles</h3>
-                    <p>Creating depth with shadows and lighting without using pure black backgrounds.</p>
+                    <h3>E- commerce Admin Dashboard</h3>
+                    <p>Development a modern admin panel with a focus usability seamless a navigation for end user and so on.</p>
                     <a href="#" class="read-article">Read Article &rarr;</a>
                 </div>
 
@@ -720,8 +894,35 @@
 
         <section class="Skills-section" id="skills-section">
             <h2>Skills</h2>
-            <p>An outline of my key technical abilities that support</p>
-            <div class="skill-categories">
+            <p>An outline of my key technical abilities that support my work.</p>
+            <div class="skills-container">
+            <div class="skill-category">
+            <h3>FRONTEND</h3>
+            <div class="skill-list">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>BACKEND & DATABASE</h3>
+            <div class="skill-list">
+                <p>PHP (Basics)</p>
+                <p>MySQL</p>
+                <p>SQL Queries</p>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>TOOLS & PLATFORMS</h3>
+            <div class="skill-list">
+                <p>VS Code (IDE)</p>
+                <p>Git/GitHub (Version Control)</p>
+                <p>Canva (Design/Prototyping)</p>
+            </div>
+        </div>
+
                 </div>
         </section>
 
@@ -729,6 +930,30 @@
             <h2>Experience</h2>
             <p>The experience through education and career</p>
             <div class="experience-timeline">
+
+            <div class="timeline-item">
+            <div class="timeline-date">Oct 2025 - Present</div>
+            <div class="timeline-content">
+                <h3>Developer Trainee</h3>
+                <h4>KLab</h4>
+                <ul>
+                    <li>Actively training in React/Next.js and Node.js...</li>
+                    <li>Collaborated within a sprint team...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2022 - 2025</div>
+            <div class="timeline-content">
+                <h3>Bachelor of Business Information Technology</h3>
+                <h4>University of Rwanda</h4>
+                <ul>
+                    <li>Key Coursework: Database Management (SQL), Software Engineering...</li>
+                    <li>Led a team project to design a mock e-commerce platform...</li>
+                </ul>
+            </div>
+        </div>
                 </div>
         </section>
 
@@ -751,7 +976,7 @@
                 </div>
 
                 <div class="blog-card">
-                    <img src="./image/blog3.png" alt="Responsive Design Image">
+                    <img src="images/blog3.png" alt="Responsive Design Image">
                     <h3>How to visualize data for better product and Responsive design: Adapting to all devices....</h3>
                     <a href="#" class="btn-read-more">Read More</a>
                 </div>
@@ -761,11 +986,109 @@
 
         <section class="testimonial-section" id="testimonial-section">
             <h2>Testimonial</h2>
+            <div class="testimonial-container">
+
+                <div class="testimonial-card">
+
+                    <p>Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
+
+                    <blockquote>
+
+                        "From the initial consultation to the final delivery, Every step was handled professionally. the end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended."
+
+                    </blockquote>
+
+                    </div>
+
+                <div class="slider-dots">
+
+                    <span class="dot active"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                </div>
+
+            </div>
+
+
             </section>
 
         <section class="contact-us-section" id="contact-section">
             <h2>Contact Us</h2>
             <p>We're here to help. Reach out for inquiries, partnerships, or support, and our team will respond as soon as possible.</p>
+             <div class="contact-content">
+
+                <div class="contact-info">
+
+                   
+
+                    <div class="info-item">
+
+                        <i class="fas fa-home"></i>
+
+                        <div class="info-details">
+
+                            <strong>Address</strong>
+
+                            <p>Kigali, Rwanda</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fas fa-phone"></i>
+
+                        <div class="info-details">
+
+                            <strong>Phone</strong>
+
+                            <p>+250789831553</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <div class="info-details">
+
+                            <strong>Email</strong>
+
+                            <p>mizeroua@gmail.com</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+               
+
+                <form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
+
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name*" required>
+
+                    <input type="email" id="email-address" name="email-address" placeholder="Email Address*" required>
+
+                    <textarea id="message" name="message" placeholder="Message*" rows="6" required></textarea>
+
+                   
+
+                    <button type="submit" class="form-submit-text" style="background: none; border: none;">Send us a message</button>
+
+                </form>
+
+            </div>
+
             </section>
 
     </main>
