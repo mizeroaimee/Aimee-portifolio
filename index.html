@@ -6,23 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aimee's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <style>
-        /* --- Root Variables for Colors --- */
         :root {
             --color-primary: #5d3fec;
             --color-dark: #1a1a1a;
             --color-light-bg: #e7d0d0;
-            --color-blog-bg: #f8f0f8; /* Light pink/mauve for the light blog section */
-            --color-project-bg: #1c1c3c; /* Dark blue/purple for the project section */
+            --color-blog-bg: #f8f0f8;
+            --color-project-bg: #1c1c3c;
         }
 
-        /* Basic Reset and Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--color-light-bg); 
+            background-color: var(--color-light-bg);
             color: #333;
         }
 
@@ -32,19 +30,19 @@
             padding: 20px;
         }
 
-        /* --- 1. Navigation Bar Styling (UNCHANGED) --- */
+        /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 40px;
-            background-color: #e9c6c6; 
+            background-color: #e9c6c6;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
             font-size: 30px;
-            font-weight: Extrabold;
+            font-weight: extrabold;
             color: #000;
         }
 
@@ -66,12 +64,13 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #000;
             font-weight: bold;
         }
 
-        /* --- 2. Hero Section Styling (UNCHANGED) --- */
+        /* Hero Section */
         .hero-section {
             display: flex;
             align-items: center;
@@ -106,8 +105,8 @@
             justify-content: flex-end;
             background-color: var(--color-dark);
             padding: 10px;
-            width: 280px; 
-            height: 500px; 
+            width: 280px;
+            height: 500px;
             overflow: hidden;
         }
 
@@ -126,10 +125,10 @@
         }
 
         .social-icons a:hover {
-            color: var(--color-primary); 
+            color: var(--color-primary);
         }
 
-        /* --- 3. About Me Section Styling (UNCHANGED) --- */
+        /* About Section */
         .about-section {
             padding: 50px 0;
             margin-top: 50px;
@@ -147,7 +146,7 @@
             display: block;
             width: 50px;
             height: 3px;
-            background-color: #f7f7f9; 
+            background-color: #f7f7f9;
             margin: 10px auto 0;
         }
 
@@ -160,8 +159,8 @@
         .about-image-container {
             background-color: var(--color-dark);
             padding: 8px;
-            width: 250px; 
-            height: 300px; 
+            width: 250px;
+            height: 300px;
             overflow: hidden;
         }
 
@@ -182,7 +181,6 @@
             line-height: 1.6;
         }
 
-        /* --- 4. Button Styling (UNCHANGED) --- */
         .about-buttons {
             margin-top: 30px;
         }
@@ -197,14 +195,14 @@
         }
 
         .btn-primary {
-            background-color: var(--color-primary); 
+            background-color: var(--color-primary);
             color: white;
             margin-right: 15px;
             border: 2px solid var(--color-primary);
         }
 
         .btn-primary:hover {
-            background-color: #4c33c4;
+            background-color: #a771bb;
         }
 
         .btn-secondary {
@@ -218,12 +216,10 @@
             color: white;
         }
 
-        /* ------------------------------------------- */
-        /* --- 5. NEW PROJECT SECTION STYLING (DARK THEME) --- */
-        /* ------------------------------------------- */
+        /* Project Section */
         .project-section {
             padding: 80px 0;
-            background-color: var(--color-project-bg); /* Dark background from image */
+            background-color: #ddb1b1;
             color: white;
             text-align: center;
             margin-top: 50px;
@@ -245,12 +241,12 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap; /* Allows wrap on smaller screens */
+            flex-wrap: wrap;
             padding: 0 20px;
         }
 
         .project-card {
-            background-color: #e7d0d0; /* Slightly lighter dark color for the cards */
+            background-color: #e89494;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -258,14 +254,14 @@
             transition: transform 0.3s;
             text-align: left;
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
         }
 
         .project-card img {
             width: 100%;
-            height: 200px; /* Fixed height for image area */
+            height: 200px;
             object-fit: cover;
             display: block;
         }
@@ -282,8 +278,7 @@
             padding: 0 20px 15px;
             margin: 0;
         }
-        
-        /* New Link/Button Style for Read Article (matching screenshot) */
+
         .project-card .read-article {
             display: inline-block;
             color: var(--color-primary);
@@ -292,193 +287,177 @@
             padding: 10px 20px 20px;
             transition: color 0.3s;
         }
-        
+
         .project-card .read-article:hover {
             color: #fff;
         }
 
-        /* --- SKILLS SECTION STYLING --- */
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f7f3f3;
+        }
 
-.skills-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f7f3f3; /* Light background matching your images */
-}
+        .skills-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-.skills-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+        .skills-section p {
+            color: #555;
+            margin-bottom: 40px;
+        }
 
-.skills-section p {
-    color: #555;
-    margin-bottom: 40px;
-}
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
 
-/* Flex container for the three columns */
-.skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Space between columns */
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            background-color: #e6e0e0;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-/* Individual skill column card */
-.skill-category {
-    flex: 1; /* Allows columns to grow and take equal space */
-    min-width: 250px; /* Ensures minimum size before wrapping */
-    background-color: #e6e0e0; /* Background color matching your cards */
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        .skill-category h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
 
-.skill-category h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #000;
-}
+        .skill-list p {
+            font-size: 1em;
+            margin: 10px 0;
+            line-height: 1.5;
+            color: #333;
+        }
 
-/* Styling for the list of skills */
-.skill-list p {
-    font-size: 1em;
-    margin: 10px 0;
-    line-height: 1.5;
-    color: #333; /* Darker text for readability */
-}
+        @media (max-width: 768px) {
+            .skills-container {
+                flex-direction: column;
+                gap: 20px;
+            }
 
-/* Responsive adjustment for smaller screens */
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column; /* Stack columns vertically */
-        gap: 20px;
-    }
-    .skill-category {
-        min-width: 100%;
-    }
-}
+            .skill-category {
+                min-width: 100%;
+            }
+        }
 
-/* --- EXPERIENCE SECTION STYLING --- */
+        /* Experience Section */
+        .experience-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f7f3f3;
+        }
 
-.experience-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f7f3f3; /* Light, neutral background */
-}
+        .experience-section h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
 
-.experience-section h2 {
-    font-size: 2em;
-    margin-bottom: 5px;
-}
+        .experience-section p {
+            color: #555;
+            margin-bottom: 40px;
+        }
 
-.experience-section p {
-    color: #555;
-    margin-bottom: 40px;
-}
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
-/* Timeline Container (The core structure) */
-.experience-timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #ccc;
+            transform: translateX(-50%);
+        }
 
-/* The subtle vertical connecting line */
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the line */
-    width: 2px;
-    height: 100%;
-    background-color: #ccc; /* Light gray line */
-    transform: translateX(-50%);
-}
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            padding: 10px 0;
+            text-align: left;
+        }
 
-/* Individual entry item */
-.timeline-item {
-    margin-bottom: 40px;
-    position: relative;
-    padding: 10px 0;
-    text-align: left;
-}
+        .timeline-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
 
-/* Timeline content container */
-.timeline-content {
-    background-color: #fff; /* White card background */
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
-}
+        .timeline-content h3 {
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
 
-.timeline-content h3 {
-    color: #1a1a1a;
-    margin-bottom: 5px;
-}
+        .timeline-date {
+            font-weight: bold;
+            color: #7a7a7a;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-.timeline-date {
-    font-weight: bold;
-    color: #7a7a7a;
-    margin-bottom: 10px;
-    display: block; /* Ensures date is on its own line */
-}
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: #4a148c;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
 
-/* Timeline bullet point (The visual marker on the line) */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background-color: #4a148c; /* Primary color (e.g., matching your buttons) */
-    border-radius: 50%;
-    border: 3px solid #fff;
-    transform: translateX(-50%);
-    z-index: 10;
-}
+        .timeline-content ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
 
-/* Make lists cleaner inside the content */
-.timeline-content ul {
-    padding-left: 20px;
-    margin-top: 10px;
-}
+        .timeline-content li {
+            margin-bottom: 5px;
+        }
 
-.timeline-content li {
-    margin-bottom: 5px;
-}
+        @media (max-width: 600px) {
+            .experience-timeline::before,
+            .timeline-item::after {
+                left: 10px;
+                transform: none;
+            }
 
+            .timeline-item {
+                padding-left: 40px;
+            }
 
-/* --- Responsive Fix (Timeline on the left for mobile) --- */
-@media (max-width: 600px) {
-    .experience-timeline::before,
-    .timeline-item::after {
-        left: 10px; /* Move line and dots to the far left */
-        transform: none;
-    }
-    
-    .timeline-item {
-        padding-left: 40px; /* Add space for the line/dots */
-    }
-    
-    .timeline-date {
-        font-size: 0.9em;
-    }
-}
+            .timeline-date {
+                font-size: 0.9em;
+            }
+        }
 
-
-        /* ------------------------------------------- */
-        /* --- 6. BLOG SECTION STYLING (LIGHT THEME) --- */
-        /* ------------------------------------------- */
+        /* Blog Section */
         .blog-selection {
             padding: 80px 20px;
-            background-color: var(--color-blog-bg); /* Light background from image */
-            text-align: center; 
+            background-color: var(--color-blog-bg);
+            text-align: center;
             margin-top: 50px;
         }
 
@@ -492,24 +471,24 @@
             font-size: 1.1em;
             color: #555;
             max-width: 700px;
-            margin: 0 auto 50px; 
+            margin: 0 auto 50px;
         }
 
         .blog-grid {
             display: flex;
             justify-content: center;
-            gap: 30px; 
+            gap: 30px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .blog-card {
-            flex: 1 1 300px; 
+            flex: 1 1 300px;
             max-width: 350px;
             display: flex;
             flex-direction: column;
-            align-items: center; 
-            text-align: left; 
+            align-items: center;
+            text-align: left;
         }
 
         .blog-card img {
@@ -524,7 +503,7 @@
             font-size: 1.05em;
             color: #333;
             font-weight: normal;
-            min-height: 40px; 
+            min-height: 40px;
             margin-bottom: 25px;
             align-self: flex-start;
             padding: 0 5px;
@@ -533,100 +512,44 @@
         .btn-read-more {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #483d8b; /* Dark purple color matching the blog image */
+            background-color: #483d8b;
             color: white;
-            text-decoration: none; 
+            text-decoration: none;
             font-size: 1em;
             font-weight: 500;
             border-radius: 4px;
             transition: background-color 0.3s ease;
-            margin-top: auto; 
-            align-self: center; 
+            margin-top: auto;
+            align-self: center;
         }
 
         .btn-read-more:hover {
             background-color: #3a326f;
         }
-        
-        /* --- 7. Testimonial Section (PLACEHOLDER STYLES) --- */
-        .testimonial-section {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #fff;
-        }
-        
-        .testimonial-section h2 {
-             font-size: 36px;
-            margin-bottom: 40px;
-        }
-        
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
-        .testimonial-card {
-            background-color: #f0f0f0;
-            padding: 30px;
-            border-radius: 8px;
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-card blockquote {
-            font-size: 1.1em;
-            color: #333;
-            border-left: 3px solid var(--color-primary);
-            padding-left: 15px;
-            margin: 15px 0 0;
-            text-align: left;
-        }
-
-        .slider-dots {
-            margin-top: 20px;
-        }
-
-        .dot {
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background-color: var(--color-primary);
-        }
-        
-        /* --- 8. CONTACT US SECTION STYLES (UNCHANGED) --- */
+        /* Contact Section */
         #contact-section {
-            background-color: #f7f7f7; 
+            background-color: #f7f7f7;
             padding: 40px 20px;
             text-align: center;
         }
 
         #contact-section h2 {
-            font-size: 28px; 
+            font-size: 28px;
             margin-bottom: 5px;
             color: #333;
         }
-        
+
         #contact-section h2::after {
             content: '';
             display: block;
             width: 50px;
             height: 3px;
-            background-color: var(--color-primary); 
+            background-color: var(--color-primary);
             margin: 10px auto 0;
         }
 
-        #contact-section > p { 
+        #contact-section>p {
             max-width: 600px;
             margin: 0 auto 30px;
             color: #555;
@@ -635,15 +558,15 @@
         .contact-content {
             display: flex;
             justify-content: center;
-            gap: 50px; 
+            gap: 50px;
             max-width: 900px;
             margin: 30px auto 0;
-            background-color: #ffffff; 
+            background-color: #ffffff;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -651,17 +574,17 @@
             text-align: left;
             min-width: 280px;
         }
-        
+
         .info-item {
             display: flex;
             align-items: center;
             gap: 15px;
             padding: 10px 0;
         }
-        
+
         .info-item i {
             font-size: 18px;
-            color: var(--color-primary); 
+            color: var(--color-primary);
         }
 
         .info-details {
@@ -685,46 +608,42 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            flex-grow: 1; 
+            flex-grow: 1;
             max-width: 450px;
         }
-        
+
         .contact-form input,
         .contact-form textarea {
             padding: 15px;
             border: none;
-            background-color: #d3d1d0; 
+            background-color: #d3d1d0;
             border-radius: 4px;
             font-size: 16px;
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .contact-form textarea {
             resize: vertical;
         }
 
-        .form-submit-text {
-            color: var(--color-primary); 
-            text-align: right; 
-            font-size: 14px;
+        .contact-form button {
+            padding: 12px;
             font-weight: bold;
-            padding: 10px 0;
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            text-decoration: none; 
-            display: block;
         }
 
-        
-        /* --- Bottom Dark Bar (REPLACED by Footer) --- */
-        .bottom-bar {
-            display: none; /* Hide the old placeholder bar */
+        .contact-form button:hover {
+            background-color: #4a148c;
         }
 
-        /* --- 9. FOOTER STYLING (UNCHANGED) --- */
-        .site-footer {
-            background-color: #3a326f; 
-            color: #f7f7f7; 
+        footer.site-footer {
+            background-color: #3a326f;
+            color: #f7f7f7;
             padding: 30px 0;
             font-size: 14px;
             text-align: center;
@@ -747,58 +666,56 @@
         }
 
         .footer-links a:hover {
-            color: var(--color-primary); 
+            color: var(--color-primary);
         }
 
-        /* --- 10. Media Query for Responsiveness --- */
         @media (max-width: 900px) {
-             /* Project Grid Mobile Stack */
-            .project-grid {
+            .project-grid,
+            .blog-grid {
                 flex-direction: column;
                 align-items: center;
             }
-            .project-card {
-                max-width: 90%;
-            }
-            
-            /* Blog Grid Mobile Stack */
-            .blog-grid {
-                flex-direction: column; 
-                align-items: center; 
-            }
+
+            .project-card,
             .blog-card {
                 max-width: 90%;
                 margin-bottom: 20px;
             }
         }
-        
+
         @media (max-width: 768px) {
-             .hero-section {
+            .hero-section {
                 flex-direction: column;
                 gap: 30px;
             }
+
             .hero-image-container {
                 width: 100%;
                 height: 400px;
             }
+
             .about-content {
                 flex-direction: column;
                 gap: 30px;
             }
+
             .about-image-container {
                 width: 100%;
                 height: 350px;
             }
+
             .contact-content {
                 flex-direction: column;
                 gap: 40px;
                 padding: 40px 20px;
             }
+
             .contact-info {
                 min-width: 100%;
                 align-items: flex-start;
                 text-align: left;
             }
+
             .footer-content {
                 flex-direction: column;
                 gap: 15px;
@@ -808,303 +725,210 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">Miro</div>
         <ul class="nav-links">
             <li><a href="#home-section" class="active">Home</a></li>
-            <li><a href="#about-section" class="active">About</a></li>
-            <li><a href="#project-section" class="active">Project</a></li>
-            <li><a href="#skills-section" class="active">Skills</a></li>
-            <li><a href="#experience-section" class="active">Experience</a></li>
-            <li><a href="#blog-selection" class="active">Blog</a></li>
-            <li><a href="#testimonial-section" class="active">Testimonial</a></li>
-            <li><a href="#contact-section" class="active">Contact</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#project-section">Projects</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#experience-section">Experience</a></li>
+            <li><a href="#blog-selection">Blog</a></li>
+            <li><a href="#contact-section">Contact</a></li>
         </ul>
     </nav>
 
-    <main class="container">
+    <div class="container">
 
+        <!-- Hero Section -->
         <section class="hero-section" id="home-section">
             <div class="hero-content">
-                <p>HI, WELCOME TO MY WORLD</p>
-                <h1>I'M Aimee,</h1>
-                <p class="tagline">an inspiring IT, Entreprenuer passionate about technology, <br> and community impact through advocacy.</p>
-
+                <p>Hello, my name is</p>
+                <h1>UWASE Mizero Aimèe</h1>
+                <p class="tagline">A final-year BIT student, passionate about creating efficient web and mobile applications that
+                    simplify everyday tasks.</p>
                 <div class="social-icons">
-                    <a href="mailto:mizeroua@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="hero-image-container">
-                <img src="images/image.png" alt="Aimee Professional Photo" class="hero-image">
+                <img src="images/hero-image.png" alt="Aimee Hero Image" class="hero-image">
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="about-section" id="about-section">
             <div class="about-title">
-                <h2>About me</h2>
+                <h2>About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-image-container">
-                    <img src="images/image.png" alt="Aimee About Photo" class="about-image">
+                    <img src="images/about-image.png" alt="Aimee About Image" class="about-image">
                 </div>
                 <div class="about-text-buttons">
-                    <p>I am an entrepreneur and also a person who is passionate about Technology, Advocating for young girls and women for empowering them, and changing the mindset, showing them they are able to think and put in action their different ideas, by contributing to the sustainable development of our country.</p>
-                    <p>By technology, as all over us we know the world is growing by not left behind the technology too so that, keep update ourself in tech can accompany as well.</p>
-
+                    <p>I am a final-year Bachelor of Information Technology student with a strong passion for web and
+                        mobile application development. During my internship at City of Kigali Hall, I gained hands-on
+                        experience in IT systems management, project implementation, and problem-solving.</p>
+                    <p>I have developed applications such as <strong>Finance Tracker</strong> and <strong>TripMate</strong>, integrating dynamic charts, dashboards, and user authentication for real-world use.</p>
                     <div class="about-buttons">
-                        <button class="btn btn-primary">My Project</button>
-                        <button class="btn btn-secondary">Download CV</button>
+                        <button class="btn btn-primary">Download Resume</button>
+                        <button class="btn btn-secondary">Hire Me</button>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section class="project-section" id="project-section">
             <div class="project-header">
-                <h2>Project</h2>
-                <p>Here's a selection of my recent work, showcasing my skills in creating user centric and visually appealing interfaces.</p>
+                <h2>Projects</h2>
+                <p>Here's a selection of my recent work: Finance Tracker and TripMate app.</p>
             </div>
             <div class="project-grid">
 
+                <!-- Finance Tracker Project -->
                 <div class="project-card">
-                    <img src="images/ee1.png" alt="Mastering CSS Grid Project Image">
-                    <h3>E- commerce Admin Dashboard  </h3>
-            <p>I focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.</p>
-                    <a href="#" class="read-article">Read Article &rarr;</a>
+                    <img src="images/finance-tracker.png" alt="Finance Tracker App Screenshot">
+                    <h3>Finance Tracker</h3>
+                    <p>A web/mobile app that helps users track income, expenses, and savings. Features include category management, transaction visualization with dynamic charts, and authentication.</p>
+                    <a href="finance-tracker.html" class="read-article">Read Article &rarr;</a>
                 </div>
 
+                <!-- TripMate Project -->
                 <div class="project-card">
-                    <img src="images/a1.png" alt="The Rise of AI in Rwanda Project Image">
-                    <h3>E- commerce Admin Dashboard</h3>
-                    <p>Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
-                    <a href="#" class="read-article">Read Article &rarr;</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/b1.png" alt="Dark Mode Design Principles Project Image">
-                    <h3>E- commerce Admin Dashboard</h3>
-                    <p>Development a modern admin panel with a focus usability seamless a navigation for end user and so on.</p>
-                    <a href="#" class="read-article">Read Article &rarr;</a>
+                    <img src="images/tripmate.png" alt="TripMate App Screenshot">
+                    <h3>TripMate</h3>
+                    <p>An intuitive trip planning app that helps users organize travel itineraries, track destinations, and manage travel budgets efficiently with real-time updates.</p>
+                    <a href="tripmate.html" class="read-article">Read Article &rarr;</a>
                 </div>
 
             </div>
         </section>
 
-        <section class="Skills-section" id="skills-section">
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills-section">
             <h2>Skills</h2>
-            <p>An outline of my key technical abilities that support my work.</p>
+            <p>Technologies and tools I frequently use in my projects</p>
             <div class="skills-container">
-            <div class="skill-category">
-            <h3>FRONTEND</h3>
-            <div class="skill-list">
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-            </div>
-        </div>
-
-        <div class="skill-category">
-            <h3>BACKEND & DATABASE</h3>
-            <div class="skill-list">
-                <p>PHP (Basics)</p>
-                <p>MySQL</p>
-                <p>SQL Queries</p>
-            </div>
-        </div>
-
-        <div class="skill-category">
-            <h3>TOOLS & PLATFORMS</h3>
-            <div class="skill-list">
-                <p>VS Code (IDE)</p>
-                <p>Git/GitHub (Version Control)</p>
-                <p>Canva (Design/Prototyping)</p>
-            </div>
-        </div>
-
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <p>HTML5</p>
+                        <p>CSS3 / SCSS</p>
+                        <p>JavaScript / ES6+</p>
+                        <p>React.js</p>
+                    </div>
                 </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <p>Node.js</p>
+                        <p>Express.js</p>
+                        <p>MySQL / Firebase</p>
+                        <p>REST APIs</p>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-list">
+                        <p>Git / GitHub</p>
+                        <p>VS Code</p>
+                        <p>Figma</p>
+                        <p>Postman</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="experience-selection" id="experience-section">
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience-section">
             <h2>Experience</h2>
-            <p>The experience through education and career</p>
+            <p>My professional journey and hands-on projects</p>
             <div class="experience-timeline">
-
-            <div class="timeline-item">
-            <div class="timeline-date">Oct 2025 - Present</div>
-            <div class="timeline-content">
-                <h3>Developer Trainee</h3>
-                <h4>KLab</h4>
-                <ul>
-                    <li>Actively training in React/Next.js and Node.js...</li>
-                    <li>Collaborated within a sprint team...</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-date">2022 - 2025</div>
-            <div class="timeline-content">
-                <h3>Bachelor of Business Information Technology</h3>
-                <h4>University of Rwanda</h4>
-                <ul>
-                    <li>Key Coursework: Database Management (SQL), Software Engineering...</li>
-                    <li>Led a team project to design a mock e-commerce platform...</li>
-                </ul>
-            </div>
-        </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 5, 2025 – June 13, 2025</span>
+                        <h3>IT Intern – City of Kigali Hall</h3>
+                        <ul>
+                            <li>Assisted in equipment and system management.</li>
+                            <li>Developed web applications like Finance Tracker and TripMate.</li>
+                            <li>Supported IT team with troubleshooting and implementation.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
         </section>
 
+        <!-- Blog Section -->
         <section class="blog-selection" id="blog-selection">
             <h2>Blog</h2>
-            <p>Discover my recent blog articles covering design principles, development tips, and the newest innovations in the industry.</p>
-
+            <p>Learn from my real project experiences, challenges I overcame, and lessons learned while building Finance Tracker and TripMate.</p>
             <div class="blog-grid">
-                
                 <div class="blog-card">
-                    <img src="images/blog1.png" alt="Designing User Interface Image">
-                    <h3>Designing Engaging user interface for the project</h3>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <img src="images/blog-finance.png" alt="Finance Tracker Blog Image">
+                    <h3>Building Finance Tracker: From Concept to Completion</h3>
+                    <a href="blog-finance.html" class="btn-read-more">Read More</a>
                 </div>
-
                 <div class="blog-card">
-                    <img src="images/blog2.png" alt="Dashboard Tips Image">
-                    <h3>Tips for Effective Dashboard layout and ......</h3>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <img src="images/blog-tripmate.png" alt="TripMate Blog Image">
+                    <h3>TripMate App Development: Challenges and Solutions</h3>
+                    <a href="blog-tripmate.html" class="btn-read-more">Read More</a>
                 </div>
-
-                <div class="blog-card">
-                    <img src="images/blog3.png" alt="Responsive Design Image">
-                    <h3>How to visualize data for better product and Responsive design: Adapting to all devices....</h3>
-                    <a href="#" class="btn-read-more">Read More</a>
-                </div>
-
             </div>
         </section>
 
-        <section class="testimonial-section" id="testimonial-section">
-            <h2>Testimonial</h2>
-            <div class="testimonial-container">
-
-                <div class="testimonial-card">
-
-                    <p>Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
-
-                    <blockquote>
-
-                        "From the initial consultation to the final delivery, Every step was handled professionally. the end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended."
-
-                    </blockquote>
-
-                    </div>
-
-                <div class="slider-dots">
-
-                    <span class="dot active"></span>
-
-                    <span class="dot"></span>
-
-                    <span class="dot"></span>
-
-                </div>
-
-            </div>
-
-
-            </section>
-
-        <section class="contact-us-section" id="contact-section">
-            <h2>Contact Us</h2>
-            <p>We're here to help. Reach out for inquiries, partnerships, or support, and our team will respond as soon as possible.</p>
-             <div class="contact-content">
-
+        <!-- Contact Section -->
+        <section id="contact-section">
+            <h2>Contact Me</h2>
+            <p>Want to get in touch? Send me a message below!</p>
+            <div class="contact-content">
                 <div class="contact-info">
-
-                   
-
                     <div class="info-item">
-
-                        <i class="fas fa-home"></i>
-
-                        <div class="info-details">
-
-                            <strong>Address</strong>
-
-                            <p>Kigali, Rwanda</p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-item">
-
                         <i class="fas fa-phone"></i>
-
                         <div class="info-details">
-
                             <strong>Phone</strong>
-
-                            <p>+250789831553</p>
-
+                            <p>+250 123 456 789</p>
                         </div>
-
                     </div>
-
-
                     <div class="info-item">
-
                         <i class="fas fa-envelope"></i>
-
                         <div class="info-details">
-
                             <strong>Email</strong>
-
-                            <p>mizeroua@gmail.com</p>
-
+                            <p>aimee@example.com</p>
                         </div>
-
                     </div>
-
-
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-details">
+                            <strong>Location</strong>
+                            <p>Kigali, Rwanda</p>
+                        </div>
+                    </div>
                 </div>
-
-               
-
-                <form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
-
-                    <input type="text" id="full-name" name="full-name" placeholder="Full Name*" required>
-
-                    <input type="email" id="email-address" name="email-address" placeholder="Email Address*" required>
-
-                    <textarea id="message" name="message" placeholder="Message*" rows="6" required></textarea>
-
-                   
-
-                    <button type="submit" class="form-submit-text" style="background: none; border: none;">Send us a message</button>
-
+                <form class="contact-form" action="#" method="POST">
+                    <input type="text" name="full-name" placeholder="Full Name*" required>
+                    <input type="email" name="email-address" placeholder="Email Address*" required>
+                    <textarea name="message" placeholder="Message*" rows="6" required></textarea>
+                    <button type="submit">Send us a message</button>
                 </form>
-
             </div>
+        </section>
 
-            </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Aimee Portfolio. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home-section">Home</a>
-                <a href="#contact-section">Contact</a>
-                <a href="#">Privacy Policy</a>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <span>&copy; 2025 UWASE Mizero Aimèe. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 
 </html>
